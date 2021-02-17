@@ -7,9 +7,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="ru.maksimov.TestBean">
-        <constructor-arg value="Neil"/>
+
+    <!--Здесь назначаем класс для бина-->
+    <bean id="musicBean"
+          class="ru.maksimov.RapMusic">
     </bean>
 
 </beans>

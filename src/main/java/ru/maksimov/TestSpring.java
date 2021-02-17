@@ -9,9 +9,12 @@ public class TestSpring {
                 "ApplicationContext.xml"//должен лежать в папке resources (mark Resources Root)
         );
 
-        TestBean testBean = context.getBean("testBean", TestBean.class);
+        //Внедрение бина
+        Music music = context.getBean("musicBean", Music.class);
 
-        System.out.println(testBean.getName());
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+
+        musicPlayer.playMusic();
 
         context.close();
     }
